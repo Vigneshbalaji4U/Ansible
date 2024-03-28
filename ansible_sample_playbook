@@ -29,7 +29,11 @@
         name: openjdk-8-jdk
         state: present
 
+    - name: Start java
+      service:
+        name: openjdk-8-jdk
+        state: started
+
     - name: Reboot machine and send a message
       reboot:
         msg: "Rebooting machine in 5 seconds"
-
